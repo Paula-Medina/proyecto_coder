@@ -1,0 +1,699 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*!---------HEADER---------*/
+
+
+.container-fluid{
+    background-color: #303031;
+    height: 150px; /* Mantener la altura */
+    padding: 40px;
+    position: sticky !important;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar .navbar-expand-lg .bg-body-tertiary{
+    position: sticky !important;
+    top: 0;
+    z-index: 1;
+}
+
+.container-fluid img{
+    width: 80px;
+    height: 80px;
+    margin: 80px;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f0f0f0; /* Color de los enlaces */
+    padding: 10px; /* Padding para que se vea consistente */
+}
+
+.navbar-nav .nav-link.active {
+    color: #f0f0f0;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic; /* Cambia el color del enlace activo */
+}
+
+/* Para asegurar que las opciones del menú estén alineadas a la derecha */
+.ms-auto {
+    margin-left: auto;
+}
+
+
+/*!---------MAIN-----------*/
+
+.hero {
+    height: calc(100vh - 140px);
+    background-image: url("../img/hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.hero a {
+    color: #303031;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    padding: 15px;
+    margin: 60px;
+    border: 2.5px solid #303031;
+    border-radius: 40px;
+}
+
+.hero a:hover{
+    background-color: #303031;
+    color: #f0f0f0;
+}
+
+.intro {
+    background-color: #303031;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h1 {
+    color: #f0f0f0;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    display: inline;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyectos h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    padding: 30px;
+}
+
+.proyectos {
+    width: 100%;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 550px;
+    gap: 20px;
+}
+
+.grid-galeria div {
+    position: relative; /* Para posicionar el h3 dentro de cada imagen */
+    overflow: hidden; /* Para evitar que el contenido sobrepase la celda */
+}
+
+.grid-galeria div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comilona {
+    grid-column: span 3;
+}
+
+.hungry,
+.boceto,
+.keep,
+.capres,
+.mila {
+    grid-column: span 5; /* Ajusta correctamente las imágenes grandes */
+}
+
+.rayano,
+.the,
+.borona,
+.collage {
+    grid-column: span 3;
+}
+
+
+.boton {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.boton a {
+    color: #303031;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    padding: 15px;
+    margin: 120px;
+    border: 2.5px solid #303031;
+    border-radius: 40px;
+}
+
+.boton a:hover{
+    background-color: #303031;
+    color: #f0f0f0;
+}
+
+.botones h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(48, 48, 49, 0.7); /* Fondo semitransparente */
+    color: white;
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    padding: 25px;
+}
+
+/* Estilos para los títulos del acordeón */
+.accordion-button {
+    color: #303031;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    padding: 25px;
+    line-height: 30px; /* Ajuste de la altura de línea para alinearse con el tamaño del contenedor */
+    padding: 5px 15px; /* Espaciado interior para ajustar el contenido */
+    background-color: #ffffff; /* Color de fondo del botón del acordeón */
+    border: none; /* Eliminar bordes del botón */
+}
+
+/* Estilo del contenedor del acordeón */
+.accordion-item {
+    margin-bottom: 10px; /* Espacio entre los elementos del acordeón */
+}
+
+.accordion-button:not(.collapsed) {
+    color: #f0f0f0;
+    background-color: #303031; /* Cambia el fondo cuando se abre el acordeón */
+}
+
+/* Ajuste del tamaño del contenedor del acordeón */
+.accordion-button, .accordion-header {
+    height: 80px; /* Tamaño del contenedor de cada acordeón */
+    display: flex;
+    align-items: center; /* Alineación vertical del texto */
+}
+
+/* Estilos para el cuerpo del acordeón */
+.accordion-body {
+    font-size: 17px; /* Tamaño de la tipografía del contenido dentro del acordeón */
+    padding: 20px; /* Espaciado interior del contenido del acordeón */
+    background-color: #fff; /* Fondo del contenido */
+    border: 1px solid #dee2e6; /* Bordes del contenido */
+    border-top: none; /* Eliminar borde superior */
+}
+
+.intro-servicios{
+    height: 60vh;
+    color: #303031;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-servicios p{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-servicios{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    padding: 30px;
+}
+
+
+/*!--------FOOTER----------*/
+
+footer {
+    height: 50vh;
+    background-color: #303031;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+footer h4 {
+    font-size: 17px;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 10px;
+}
+
+footer form div {
+    color: #f0f0f0;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+footer form .nombre input{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer form .correo input{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer form .cuentanos input{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    padding: 8px;
+}
+
+textarea {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    padding: 8px;
+    width: 100%; /* Hace que el textarea tenga el mismo ancho que la pregunta */
+    height: calc(2 * 40px); /* Doble de altura que los otros campos (como nombre y mail) */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none; /* Elimina la opción de redimensionar el textarea */
+}
+
+.final img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.redes {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final p {
+    width: 40%;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 17px;
+    margin-bottom: 60px;
+    font-style: normal;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.paises, .mail {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+
+/**--------Responsive header----------*/
+
+@media screen and (max-width: 1200px) {
+
+    .container-fluid {
+        flex-direction: column; /* Asegúrate de que la barra se acomode en columna */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        padding: 20px; /* Menos padding para que ocupe menos espacio */
+    }
+
+    .container-fluid img {
+        width: 60px; /* Tamaño de imagen reducido */
+        height: 60px; /* Mantén la proporción */
+        margin: 10px; /* Menos margen */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los enlaces */
+        width: 100%; /* Asegura que los enlaces ocupen todo el ancho */
+    }
+
+    .nav-link {
+        font-size: 16px; /* Reduce el tamaño del texto */
+        padding: 8px 0; /* Espaciado vertical */
+        width: 100%; /* Asegura que los enlaces ocupen todo el ancho */
+        text-align: center; /* Centra el texto */
+    }
+
+    .hero {
+        height: 75vh; /* Aún más pequeña para pantallas móviles */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero a {
+        font-size: 16px; /* Ajustamos aún más el texto */
+        padding: 10px;
+    }
+
+
+    .intro {
+        height: 60vh;
+    }
+
+    .intro h1 {
+        font-size: 25px;
+        width: 55%;
+    }
+
+    .boton {
+        height: 30vh;
+    }
+
+    footer {
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width:990px){
+    .navbar-toggler{
+        background-color: #f0f0f0;
+        margin: 20px;
+    }
+
+    .navbar-toggler-icon{
+        height: 20px;
+        width: 15px;
+    }
+
+    .container-fluid{
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+}
+
+
+/**--------Responsive main----------*/
+
+@media screen and (max-width:600px){
+    .proyectos h2 {
+        font-size: 22px;
+    }
+
+    .titulo-servicios {
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:740px){
+    .hero{
+        background-image: url("../img/hero\ 2.jpg");
+    }
+}
+
+.hero {
+    height: calc(100vh - 140px);
+    background-image: url("../img/hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+
+@media screen and (max-width:1150px) {
+    .grid-galeria {
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 500px;
+        gap: 15px;
+    }
+
+    .imagen-s {
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+
+    .imagen-m {
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .grid-galeria {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 450px;
+        gap: 15px;
+    }
+
+    .imagen-s {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .imagen-m {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media screen and (max-width:970px) {
+    .hero{
+        height: 80vh;
+        background-size: cover;
+    }
+
+    .intro {
+        height: 65vh;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+        width: 55%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:650px){
+    .hero {
+        height: 60vh; /* Reducimos la altura en pantallas más pequeñas */
+        background-size: cover; /* La imagen seguirá cubriendo la sección sin deformarse */
+        background-position: center; /* Centra la imagen en la pantalla */
+    }
+    
+    .hero a {
+        font-size: 18px; /* Ajustamos el tamaño del texto */
+        padding: 12px;
+    }
+
+    .intro h1 {
+        font-size: 25px;
+        width: 60%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:450px){
+    .intro{
+        height: 50vh;
+    }
+
+    .intro h1 {
+        font-size: 17px;
+        width: 75%;
+    }
+}
+
+
+/**--------Responsive main page servicios----------*/
+
+
+@media screen and (max-width:985px){
+    .intro-servicios{
+        height: 50vh;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:700px){
+    .intro-servicios p{
+        width: 75%;
+    }
+}
+
+
+    /**--------Responsive footer----------*/
+
+    /* @media screen and (max-width:650px) {
+        footer {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .paises {
+            display: none;
+        }
+
+        .mail {
+            display: none;
+        }
+
+        .redes {
+            padding: 40px;
+            flex-direction: row;
+            align-items: start;
+        }
+    } */
+
+
+@media screen and (max-width:1200px) {
+    .final p {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:850px){
+    footer form{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    footer {
+        height: 60vh;
+        flex-direction: column; /* Alinea todo en columna */
+        align-items: flex-start; /* Centra los elementos */
+        padding: 20px;
+    }
+
+    .final img {
+        margin-bottom: 20px; /* Añade espacio entre el logo y el texto */
+    }
+
+    .final p {
+        width: 100%; /* Ocupa todo el ancho */
+        text-align: left; /* Alinea el texto a la izquierda */
+        margin-bottom: 20px; /* Espacio debajo del texto */
+    }
+
+    .paises, .mail {
+        justify-content: flex-start; /* Alinea el contenido a la izquierda */
+        align-items: center;
+        margin-bottom: 15px; /* Espacio entre secciones */
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .redes {
+        padding: 0%; /* Ajustar el padding */
+        flex-direction: row; /* Organiza las redes en fila */
+        justify-content: flex-start; /* Alinea las redes a la izquierda */
+        align-items: center; /* Centra verticalmente los iconos */
+    }
+}
